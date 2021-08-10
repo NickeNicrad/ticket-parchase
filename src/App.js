@@ -1,24 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Sidebar from './components/Sidebar';
+import Home from './components/pages/Home';
+import Profile from './components/pages/Profile';
+import Messages from './components/pages/Messages';
+import Login from './components/auth/Login';
+import Invoices from './components/pages/Invoices';
+import Pricing from './components/pages/Pricing';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Switch>
+          <Route path="/login" component={Login} />
+        </Switch>
+      </Router>
+
+      <Router>
+        {/* <div className="app-profile"> */}
+          <div className='connect-container align-content-stretch d-flex flex-wrap'>
+            <Sidebar />
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route path='/profile' component={Profile} />
+              <Route path='/messages' component={Messages} />
+              <Route path='/invoices' component={Invoices} />
+              <Route path='/pricing' component={Pricing} />
+            </Switch>
+          </div>
+        {/* </div> */}
+      </Router>
+    </>
   );
 }
 

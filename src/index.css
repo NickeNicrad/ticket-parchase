@@ -1,13 +1,293 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+::-webkit-scrollbar {
+	width: 3px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #555;
+	border-radius: 0.5rem;
+}
+
+.test {
+	border: 1px solid red;
+}
+
+button {
+	cursor: pointer;
+}
+
+.boat-form {
+	position: relative;
+}
+
+.boat-form .boat-form-data {
+	width: 96%;
+	position: absolute;
+	background-color: white;
+	border: 1px solid #666;
+	z-index: 999;
+	box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.3);
+	display: none;
+}
+
+.boat-form .boat-form-data h6 {
+	width: 100%;
+	display: block;
+	padding: 0.67rem 2rem;
+	font-weight: lighter;
+	font-size: small;
+	margin: 0;
+}
+
+.boat-form .boat-form-data h6:first-child {
+	background-color: #cbcbcb;
+	color: #888;
+}
+
+.boat-form .boat-form-data h6:first-child:hover {
+	background-color: #cbcbcb;
+	color: #888;
+}
+
+.boat-form .boat-form-data h6:hover {
+	background-color: #17a2b8;
+	color: white;
+}
+
+#search-member-id {
+	width: 350px;
+}
+
+#client-card-id {
+	height: 404px;
+	overflow-y: hidden;
+}
+
+#client-tab-id {
+	height: 460px;
+	overflow-y: scroll;
+}
+
+#member-tab-id {
+	height: 340px;
+	overflow-y: scroll;
+}
+
+#invoices-container-id {
+	height: 580px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+#page-footer-id {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+a {
+	cursor: pointer;
+}
+
+ul {
+	list-style: none;
+}
+
+.card-user {
+	position: absolute;
+	top: 130px;
+	padding: 0;
+	margin: 0;
+	color: #fff;
+}
+
+.card-profile-container {
+	position: relative;
+}
+
+.card-profile-container .card-profile-img {
+	width: 100%;
+	position: absolute;
+	bottom: -50px;
+}
+
+.card-profile-container .close-modal-btn {
+	position: absolute;
+	right: 5px;
+}
+
+#msg-user-search {
+	padding: 12px 25px;
+	height: auto;
+	border-radius: 7px;
+	font-size: 13px;
+	font-weight: 700;
+	color: #5c6662;
+}
+
+#chat-id-2-input {
+	border-radius: 7px;
+	outline: none;
+	border-style: none;
+}
+
+#send-msg-btn {
+	width: 50px;
+	height: 50px;
+}
+
+.message-container {
+	height: 445px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.conversations {
+	overflow-y: auto;
+	height: 535px;
+	border-radius: 7px;
+}
+
+.msg-bg {
+	box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+	border-radius: 0.3rem;
+}
+
+.invoice-container {
+	width: 380px;
+	padding: 1rem;
+	box-sizing: border-box;
+	display: none;
+}
+
+.pricing-container {
+	height: 570px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+#notification-container {
+	width: 280px;
+	max-height: 480px;
+	overflow-y: scroll;
+}
+
+@media (max-width: 1024px) {
+	#client-tab-id {
+		height: 79vh;
+		overflow-y: scroll;
+	}
+
+	#member-tab-id {
+		height: 50vh;
+		overflow-y: scroll;
+	}
+
+	.conversations {
+		overflow-y: auto;
+		height: 84vh;
+		border-radius: 7px;
+		margin-bottom: 12px;
+	}
+
+	.message-container {
+		height: 78.5vh;
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
+}
+
+@media (max-width: 768px) {
+	#client-tab-id {
+		height: 73vh;
+		overflow-y: scroll;
+	}
+
+	.conversations {
+		overflow-y: auto;
+		height: 80vh;
+		border-radius: 7px;
+		margin-bottom: 12px;
+	}
+
+	.message-container {
+		height: 73vh;
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
+}
+
+@media (max-width: 414px) {
+	#client-tab-id {
+		height: 55vh;
+		overflow-y: scroll;
+	}
+
+	.conversations {
+		overflow-y: auto;
+		height: 75.5vh;
+		border-radius: 7px;
+		margin-bottom: 12px;
+	}
+
+	.message-container {
+		height: 65vh;
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
+}
+
+@media (max-width: 375px) {
+	#client-tab-id {
+		height: 51.5vh;
+		overflow-y: scroll;
+	}
+
+	#search-member-id {
+		width: 300px;
+	}
+
+	.conversations {
+		overflow-y: auto;
+		height: 73vh;
+		border-radius: 7px;
+		margin-bottom: 12px;
+	}
+
+	.message-container {
+		height: 61.5vh;
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
+}
+
+@media (max-width: 320px) {
+	#search-member-id {
+		width: 255px;
+	}
+
+	.conversations {
+		overflow-y: auto;
+		height: 68.5vh;
+		border-radius: 7px;
+		margin-bottom: 12px;
+	}
+
+	.message-container {
+		height: 55vh;
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
 }
